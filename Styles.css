@@ -1,0 +1,167 @@
+:root{
+    --ivory: #F1ECE4;
+    --nude: #C3B090;
+    --sand-dollar: #DDCAB2;
+    --tan: #92794F;
+}
+
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--tan);
+    background: var(--ivory);
+    font-family: poppins, sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .form input{
+    border-radius: 20px 0 0 20px;
+}
+
+main .form input:focus-visible{
+    outline: none;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: whitesmoke;
+}
+
+form button{
+    color: var(--tan);
+    background: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+form button:hover{
+    background: var(--nude);
+    color: white;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 40%;
+    list-style: none;
+}
+
+.todo{
+    margin: .5rem;
+    background: whitesmoke;
+    font-size: 1.5rem;
+    color: var(--nude);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .4s ease-in-out;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-button, .completed-button{
+    background: white;
+    color: var(--tan);
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.completed-button{
+    color: green;
+    transition: all .3s ease;
+}
+
+.completed-button:hover{
+    background: rgb(116, 221, 116);
+    color: white;
+}
+
+.trash-button{
+    color: red;
+    transition: all .3s ease;
+}
+
+.trash-button:hover{
+    background-color: rgb(219, 120, 120);
+    color: white;
+}
+
+.todo-item{
+    padding: 0rem .5rem;
+}
+
+.bi-check2, .bi-trash{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.removeAnim{
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: var(--tan);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background:white;
+    color: var(--tan);
+    top: 0; right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .4s ease;
+}
+
+.select:hover::after{
+    background-color: var(--nude);
+    color: white;
+}
